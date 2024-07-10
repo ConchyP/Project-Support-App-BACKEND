@@ -8,11 +8,11 @@
 		<version>3.2.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.factoriaf5</groupId>
-	<artifactId>digital_academy</artifactId>
+	<groupId>org.conchy</groupId>
+	<artifactId>conchy</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>digital_academy</name>
-	<description>Spring Boot in Digital Academy P3</description>
+	<name>conchy</name>
+	<description>Support App Spring boot</description>
 	<url/>
 	<licenses>
 		<license/>
