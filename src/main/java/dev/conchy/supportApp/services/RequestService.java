@@ -12,31 +12,31 @@ import dev.conchy.supportApp.repositories.RequestRepository;
 public class RequestService {
 
     @Autowired
-    private  RequestRepository requestRepository;
+    private  RequestRepository repository;
 
     public List<Request> getAllRequests() {
-        return requestRepository.findAll();
+        return repository.findAll();
     }
 
-    public Request getRequestById(Long idRequest) {
-        return requestRepository.findById(idRequest).orElseThrow(() -> new RuntimeException("Request not found"));
+    public Request getRequestById(Long id) {
+        return repository.findById(id).orElseThrow(() -> new RuntimeException("Request not found"));
     }
 
     public Request createRequest(Request request) {
-        return requestRepository.save(request);
+        return repository.save(request);
     }
 
     public Request updateRequest(Request request) {
-        if (!requestRepository.existsById(request.getIdRequest())) {
+        if (!repository.existsById(request.getid())) {
             throw new RuntimeException("Request not found");
         }
-        return requestRepository.save(request);
+        return repository.save(request);
     }
 
-    public void deleteRequestById(Long idRequest) {
-        if (!requestRepository.existsById(idRequest)) {
+    public void deleteRequestById(Long id) {
+        if (!repository.existsById(id)) {
             throw new RuntimeException("Request not found");
         }
-        requestRepository.deleteById(idRequest);
+        repository.deleteById(id);
     }
 }

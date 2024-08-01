@@ -15,8 +15,8 @@ import jakarta.persistence.Table;
 public class Request {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idRequest")
-    private Long idRequest;
+    @Column(name = "id")
+    private Long id;
 
     @Column(name = "dateRequest")
     private LocalDate dateRequest;
@@ -34,27 +34,27 @@ public class Request {
 
     }
 
-    public Request(Long idRequest, LocalDate dateRequest, String name, String typeRequest, String description) {
-        this.idRequest = idRequest;
+    public Request(Long id, LocalDate dateRequest, String name, String typeRequest, String description) {
+        this.id = id;
         this.dateRequest = dateRequest;
         this.name = name;
         this.typeRequest = typeRequest;
         this.description = description;
     }
 
-    public Long getIdRequest() {
-        return idRequest;
+    public Long getid() {
+        return id;
     }
 
-    public void setIdRequest(Long idRequest) {
-        this.idRequest = idRequest;
+    public void setid(Long id) {
+        this.id = id;
     }
 
-    public LocalDate getDateRequest() {
+    public LocalDate getdateRequest() {
         return dateRequest;
     }
 
-    public void setDateRequest(LocalDate dateRequest) {
+    public void setdateRequest(LocalDate dateRequest) {
         this.dateRequest = dateRequest;
     }
 
