@@ -15,22 +15,24 @@ import jakarta.persistence.Table;
 public class Request {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "id_request")
     private Long id;
 
-    @Column(name = "dateRequest")
+    @Column(name = "date_request")
     private LocalDate dateRequest;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "typeRequest")
+    @Column(name = "type_request")
     private String typeRequest;
 
     @Column(name = "description")
     private String description;
 
-    public Request() {
+    public Request() {}
+
+    public Request(long l, String string) {
 
     }
 
